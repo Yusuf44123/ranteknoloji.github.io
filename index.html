@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-dark: #050b1d;
+      --bg-mid: #081633;
+      --card-bg: rgba(255,255,255,0.06);
+      --accent: #3da9fc;
+      --text-main: #ffffff;
+      --text-soft: #cfd8ff;
+      --border-soft: rgba(255,255,255,0.12);
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -16,106 +26,111 @@
     body {
       margin: 0;
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(135deg, #020617, #020b2e, #020617);
-      color: #e5e7eb;
+      background: radial-gradient(circle at top, #0b1d4a 0%, var(--bg-dark) 70%);
+      color: var(--text-main);
     }
 
-    /* HEADER */
     header {
-      padding: 24px 48px;
+      padding: 28px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: rgba(2,6,23,0.9);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      border-bottom: 1px solid var(--border-soft);
+      backdrop-filter: blur(8px);
     }
 
     header strong {
       font-size: 18px;
       letter-spacing: 1px;
-      color: #38bdf8;
+      color: var(--accent);
     }
 
     nav a {
       margin-left: 24px;
       text-decoration: none;
-      color: #e5e7eb;
+      color: var(--text-soft);
       font-weight: 500;
-      transition: color 0.3s;
+      transition: color .3s;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: var(--accent);
     }
 
-    /* HERO */
-    .hero {
-      padding: 140px 48px 120px;
+    main {
+      padding: 140px 48px 100px;
       max-width: 1200px;
       margin: auto;
     }
 
-    .hero h1 {
+    h1 {
       font-size: 56px;
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 24px;
-      color: #ffffff;
     }
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.8;
+    p.hero-text {
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--text-soft);
       max-width: 720px;
-      color: #cbd5f5;
+      margin-bottom: 48px;
     }
 
-    /* SERVICES */
-    .services {
+    .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 80px;
+      gap: 32px;
+      margin-top: 40px;
     }
 
     .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
       padding: 32px;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(12px);
+      transition: transform .35s ease, box-shadow .35s ease;
     }
 
     .card:hover {
       transform: translateY(-8px);
-      border-color: #38bdf8;
-      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
     }
 
     .card h3 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 20px;
-      color: #38bdf8;
+      color: var(--accent);
     }
 
     .card p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #d1d5f0;
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: var(--text-soft);
     }
 
-    /* FOOTER */
     footer {
-      text-align: center;
-      padding: 48px 20px;
       margin-top: 120px;
+      padding: 48px;
+      text-align: center;
       font-size: 14px;
-      color: #9ca3af;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9aa4d1;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+      header {
+        padding: 20px 28px;
+      }
+      main {
+        padding: 100px 28px;
+      }
     }
   </style>
 </head>
@@ -132,27 +147,28 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <main>
     <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-    <p>
+
+    <p class="hero-text">
       RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
-      işletmelerin dijital dönüşümüne güç katar.
+      işletmelerin dijital dönüşümüne gerçek değer katar.
     </p>
 
-    <div class="services">
+    <div class="cards">
       <div class="card">
         <h3>Yazılım & Dijital</h3>
         <p>
-          Modern, ölçeklenebilir ve güvenli yazılım çözümleri ile
-          işinizi geleceğe taşıyoruz.
+          Modern, ölçeklenebilir ve güvenli yazılım çözümleriyle işinizi
+          geleceğe taşıyoruz.
         </p>
       </div>
 
       <div class="card">
         <h3>Teknoloji Danışmanlığı</h3>
         <p>
-          İş süreçlerinizi analiz eder, teknolojiyle optimize eder
-          ve verimliliği artırırız.
+          İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve
+          verimliliği artırırız.
         </p>
       </div>
 
@@ -164,7 +180,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     © 2026 RAN Teknoloji
