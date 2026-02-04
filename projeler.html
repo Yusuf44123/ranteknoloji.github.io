@@ -4,79 +4,38 @@
 <meta charset="UTF-8">
 <title>Projeler | RAN Teknoloji</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Inter,Arial;
-  background:#020617;
-  color:#e5e7eb;
-  opacity:0;
-  animation:fadeIn .4s ease forwards;
-}
-@keyframes fadeIn{to{opacity:1}}
-
-header{
-  height:80px;
-  padding:0 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-header strong{color:#38bdf8}
-nav a{margin-left:24px;color:#e5e7eb;text-decoration:none}
-nav a:hover{color:#38bdf8}
-
-main{max-width:1100px;margin:auto;padding:100px 40px}
-h1{font-size:42px;margin-bottom:40px}
-
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:28px
-}
+body{margin:0;font-family:'Inter',sans-serif;background:#020617;color:#fff}
+main{max-width:1100px;margin:auto;padding:80px 40px}
 .project{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:14px;
-  padding:24px
+  padding:25px;
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
-.project h3{color:#38bdf8;margin-bottom:10px}
-.project p{color:#cbd5f5;font-size:15px}
-
-footer{
-  text-align:center;
-  padding:40px 20px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#9ca3af
-}
+h1{font-size:42px}
 </style>
 </head>
 
 <body>
-
-<header>
-  <strong>RAN TEKNOLOJİ</strong>
-  <nav>
-    <a href="index.html">Ana Sayfa</a>
-    <a href="kurumsal.html">Kurumsal</a>
-    <a href="faaliyet.html">Faaliyet Alanları</a>
-    <a href="projeler.html">Projeler</a>
-  </nav>
-</header>
-
 <main>
-  <h1>Projeler</h1>
-  <div class="projects">
-    <div class="project"><h3>Kurumsal Web Platformu</h3><p>Modern ve güvenli web altyapısı.</p></div>
-    <div class="project"><h3>Dijital Dönüşüm</h3><p>İş süreçlerini dijitalleştiren çözümler.</p></div>
-    <div class="project"><h3>IT Altyapı</h3><p>Kurumsal ağ ve sistem projeleri.</p></div>
-  </div>
+<h1>Projelerimiz</h1>
+
+<div class="project">
+  <h3>Kurumsal Web Sitesi</h3>
+  <p>Modern, hızlı ve güvenli web çözümleri.</p>
+</div>
+
+<div class="project">
+  <h3>Dijital Dönüşüm Projesi</h3>
+  <p>İş süreçlerini dijitalleştiren entegre sistemler.</p>
+</div>
+
+<div class="project">
+  <h3>Özel Yazılım</h3>
+  <p>Firmaya özel otomasyon ve yazılım projeleri.</p>
+</div>
+
 </main>
-
-<footer>© 2026 RAN Teknoloji</footer>
-
 </body>
 </html>
