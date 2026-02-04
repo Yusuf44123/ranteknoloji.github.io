@@ -11,6 +11,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
   font-family:Inter,Arial,sans-serif;
   background:#050914;
@@ -27,8 +28,15 @@ header{
   display:flex;justify-content:space-between;align-items:center;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-header strong{color:#38bdf8;font-size:18px}
-nav a{color:#cbd5f5;margin-left:30px;text-decoration:none}
+header strong{
+  color:#38bdf8;
+  font-size:18px;
+}
+nav a{
+  color:#cbd5f5;
+  margin-left:30px;
+  text-decoration:none;
+}
 nav a:hover{color:#38bdf8}
 
 /* SECTION */
@@ -50,7 +58,8 @@ section{padding:120px 80px}
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;margin-top:60px;
+  gap:30px;
+  margin-top:60px;
 }
 .card{
   background:rgba(255,255,255,.04);
@@ -59,19 +68,35 @@ section{padding:120px 80px}
   padding:30px;
   transition:.3s;
 }
-.card:hover{transform:translateY(-6px);border-color:#38bdf8}
-.card h3{color:#38bdf8;margin-bottom:15px}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#38bdf8;
+}
+.card h3{
+  color:#38bdf8;
+  margin-bottom:15px;
+}
 
 /* ALT */
 .alt{background:#070c1e}
 
 /* FOOTER */
 footer{
-  background:#030712;padding:70px 80px;text-align:center;
-  border-top:1px solid rgba(255,255,255,.06)
+  background:#030712;
+  padding:70px 80px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
 }
-footer a{color:#38bdf8;text-decoration:none;margin:0 15px}
-footer p{margin-top:20px;font-size:14px;color:#94a3b8}
+footer a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 15px;
+}
+footer p{
+  margin-top:20px;
+  font-size:14px;
+  color:#94a3b8;
+}
 
 /* SABİT SOSYAL BAR */
 .social-bar{
@@ -81,11 +106,12 @@ footer p{margin-top:20px;font-size:14px;color:#94a3b8}
   transform:translateY(-50%);
   display:flex;
   flex-direction:column;
-  gap:15px;
+  gap:14px;
   z-index:999;
 }
 .social-bar a{
-  width:48px;height:48px;
+  width:46px;
+  height:46px;
   background:#0b1b3a;
   color:#38bdf8;
   display:flex;
@@ -105,14 +131,15 @@ footer p{margin-top:20px;font-size:14px;color:#94a3b8}
   position:fixed;
   right:20px;
   bottom:20px;
-  width:60px;height:60px;
+  width:60px;
+  height:60px;
   border-radius:50%;
   background:#38bdf8;
   color:#050914;
-  font-size:26px;
   display:flex;
   align-items:center;
   justify-content:center;
+  font-size:26px;
   cursor:pointer;
   z-index:1000;
 }
@@ -138,7 +165,10 @@ footer p{margin-top:20px;font-size:14px;color:#94a3b8}
   color:#cbd5f5;
   cursor:pointer;
 }
-#assistant button:hover{background:#38bdf8;color:#050914}
+#assistant button:hover{
+  background:#38bdf8;
+  color:#050914;
+}
 
 /* MOBİL */
 @media(max-width:768px){
@@ -186,7 +216,7 @@ footer p{margin-top:20px;font-size:14px;color:#94a3b8}
 <script>
 function toggleAssistant(){
   const a=document.getElementById('assistant');
-  a.style.display=a.style.display==='block'?'none':'block';
+  a.style.display = a.style.display === 'block' ? 'none' : 'block';
 }
 function goTo(id){
   document.getElementById(id).scrollIntoView({behavior:'smooth'});
