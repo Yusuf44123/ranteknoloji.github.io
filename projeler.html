@@ -4,62 +4,22 @@
   <meta charset="UTF-8">
   <title>Projeler | RAN Teknoloji</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #222;
-    }
-
-    header {
-      padding: 30px 40px;
-      border-bottom: 1px solid #e5e5e5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-
-    main {
-      padding: 100px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    .project {
-      margin-bottom: 30px;
-      padding: 20px;
-      border: 1px solid #eee;
-      border-radius: 8px;
-    }
-
-    .project h3 {
-      margin: 0 0 10px;
-    }
-
-    footer {
-      padding: 30px;
-      border-top: 1px solid #e5e5e5;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
+    body{margin:0;font-family:Inter,Arial;background:#020617;color:#e5e7eb}
+    header{padding:24px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
+    header strong{color:#38bdf8}
+    nav a{margin-left:24px;color:#e5e7eb;text-decoration:none}
+    nav a:hover{color:#38bdf8}
+    main{max-width:1100px;margin:auto;padding:100px 48px}
+    h1{font-size:42px;margin-bottom:24px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:60px}
+    .project{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:28px;border-radius:14px}
+    .project h3{color:#38bdf8}
+    .project p{color:#cbd5f5;line-height:1.6}
+    footer{text-align:center;padding:40px;border-top:1px solid rgba(255,255,255,.08);color:#9ca3af}
   </style>
 </head>
-
 <body>
 
 <header>
@@ -73,21 +33,21 @@
 </header>
 
 <main>
-  <h1>Projelerimiz</h1>
+  <h1>Projeler</h1>
 
-  <div class="project">
-    <h3>Kurumsal Web Sitesi</h3>
-    <p>Modern, hızlı ve mobil uyumlu kurumsal web çözümleri.</p>
-  </div>
-
-  <div class="project">
-    <h3>Dijital Dönüşüm Projesi</h3>
-    <p>İş süreçlerini dijitalleştiren yazılım ve sistem entegrasyonları.</p>
-  </div>
-
-  <div class="project">
-    <h3>Özel Yazılım Geliştirme</h3>
-    <p>Firmaya özel yazılım ve otomasyon projeleri.</p>
+  <div class="projects">
+    <div class="project">
+      <h3>Kurumsal Web Platformu</h3>
+      <p>Kurumlara özel modern ve güvenli web altyapıları.</p>
+    </div>
+    <div class="project">
+      <h3>Dijital Dönüşüm Projesi</h3>
+      <p>İş süreçlerini dijitalleştiren entegre çözümler.</p>
+    </div>
+    <div class="project">
+      <h3>IT Altyapı Çözümü</h3>
+      <p>Kurumsal ağ, sistem ve entegrasyon projeleri.</p>
+    </div>
   </div>
 </main>
 
